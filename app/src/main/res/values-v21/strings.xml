@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Login</string>
+    <string name="Register">Register</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="email">Email</string>
+    <string name="submit">Submit</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="programming_guide">Programming Guide</string>
+    <string name="connet_with_google">Connet with Google</string>
+    <string name="connect_with_facebook">Connect with Facebook</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="i_already_have_an_acoount">I already have an acoount.</string>
+    <string name="title_1">Quiz Test</string>
+    <string name="title_2">Coding Test</string>
+    <string name="title_3">Interview Questions Test</string>
+    <string name="title_4">Random Test</string>
+    <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="verification_text">A Verification link is sent to your Email.\nPlease Verify your Email.</string>
+
+
+</resources>

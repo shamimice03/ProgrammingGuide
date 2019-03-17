@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".userAuth.Login_options">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="@dimen/app_bar_height"
+        android:layout_height="@dimen/app_bar_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="362dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:transitionName="imagetransition"
+        app:srcCompat="@mipmap/app_circle_logo" />
+
+    <RelativeLayout
+        android:id="@+id/WelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="304dp"
+        android:layout_marginTop="34dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome_to"
+            android:fontFamily="@font/actor"
+            android:textSize="@dimen/text_margin"
+            android:textColor="@color/fontColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/first"
+            android:layout_toRightOf="@+id/first"
+            android:gravity="center"
+            android:fontFamily="@font/actor"
+            android:text="@string/programming_guide"
+            android:textSize="@dimen/text_margin"
+            android:textColor="@color/fontColorPrimary"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginBottom="42dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/GoogleButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_selector_google"
+            android:text="@string/connet_with_google"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/FacebookButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_selector_facebook"
+            android:text="@string/connect_with_facebook"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appRegisterButton"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_selector"
+            android:text="@string/sign_up_with_email"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/LoginPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/firstt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/actor"
+            android:text="@string/i_already_have_an_account"
+            android:textColor="@color/fontColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/loginPageGO"
+            android:layout_toEndOf="@+id/firstt"
+            android:fontFamily="@font/actor"
+            android:layout_toRightOf="@+id/firstt"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/appPrimary" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

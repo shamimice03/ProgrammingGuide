@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1072964031657",
+    "firebase_url": "https://programming-guide-86b8f.firebaseio.com",
+    "project_id": "programming-guide-86b8f",
+    "storage_bucket": "programming-guide-86b8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072964031657:android:d0a4c70b90da9636",
+        "android_client_info": {
+          "package_name": "com.ice.shamim.programmingguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072964031657-3aqucco9h5rbmcmm4aukvbbpik4pekp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ice.shamim.programmingguide",
+            "certificate_hash": "7044e4ba95841b20a276151962b29e84f02b598d"
+          }
+        },
+        {
+          "client_id": "1072964031657-mt9gau5ddfe0780h30udfdbn2nd6l6ks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBhEYopRN_X3Yd-yZfD6jPlvKISZkiiRw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072964031657-mt9gau5ddfe0780h30udfdbn2nd6l6ks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

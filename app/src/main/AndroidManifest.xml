@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ice.shamim.programmingguide">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_circle_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".splashScreen.Show_Splash_Screen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".userAuth.Login_options" />
+        <activity
+            android:name=".userAuth.Login"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity android:name=".userAuth.SignUp">
+
+        </activity>
+
+
+        <activity android:name=".userAuth.UVa" />
+        <activity android:name=".userAuth.Codeforces" />
+        <activity android:name=".Menu.MenuChoice" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".MainMenu.MainMenu"> </activity>
+        <activity android:name=".MainMenu.Navigation" />
+        <activity android:name=".MainMenu.Fragment.Event.EventMenuItem">
+
+        </activity>
+    </application>
+
+</manifest>

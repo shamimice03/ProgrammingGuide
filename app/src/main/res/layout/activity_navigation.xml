@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nav_layout"
+    android:background="@drawable/gradient_animation_list"
+    style="@style/CustomActivityAnimation"
+    tools:context=".MainMenu.Navigation">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/backToMainMenu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="527dp"
+        android:layout_marginTop="16dp"
+        android:background="@mipmap/navigation_arrow_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical">
+
+
+       <LinearLayout
+           android:id="@+id/Select"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:background="@drawable/ic_nav_button">
+
+           <ImageView
+               android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dp"
+               android:src="@mipmap/course"/>
+
+           <TextView
+               android:layout_marginLeft="20dp"
+               android:layout_gravity="center_vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAllCaps="false"
+               android:textColor="@color/appPrimary"
+               android:layout_marginRight="30dp"
+               android:text="Select Another Course" />
+
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Library"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_nav_button"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/library" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="Library"
+                android:textAllCaps="false"
+                android:textColor="@color/appPrimary" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Forum"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_nav_button">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/forum"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/appPrimary"
+                android:text="Forum" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Credits"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_nav_button">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/credits"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/appPrimary"
+                android:text="Credits" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Feedback"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_nav_button">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/feedback"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/appPrimary"
+                android:text="Feedback" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

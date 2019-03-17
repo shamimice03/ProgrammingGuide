@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_course"
+        android:checked="true"
+        android:icon="@mipmap/course"
+        android:title="Course"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_recommanded"
+        android:checked="false"
+        android:icon="@mipmap/recommanded"
+        android:iconTint="@color/appPrimary"
+        android:title="Recommanded"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_event"
+        android:checked="false"
+        android:icon="@mipmap/event"
+        android:title="Event"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:checked="false"
+        android:icon="@mipmap/profile"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_leaderboard"
+        android:checked="false"
+        android:icon="@mipmap/leaderboard"
+        android:title="Leaderboard"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

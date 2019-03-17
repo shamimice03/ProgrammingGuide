@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/gradient_scooter"
+        android:duration="5000"/>
+
+    <item
+        android:drawable="@drawable/gradient_blue_respberry"
+        android:duration="5000"/>
+
+    <item
+        android:drawable="@drawable/gradient_solid_vault"
+        android:duration="5000"/>
+
+    <item
+        android:drawable="@drawable/gradient_blue_skies"
+        android:duration="5000"/>
+
+    <item
+        android:drawable="@drawable/gradient_venice"
+        android:duration="5000"/>
+
+</animation-list>
