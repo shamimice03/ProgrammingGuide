@@ -13,11 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".splashScreen.Show_Splash_Screen">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".userAuth.Login_options" />
@@ -30,7 +26,15 @@
         </activity>
 
 
-        <activity android:name=".userAuth.UVa" />
+        <activity android:name=".userAuth.Uva.UVa" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".userAuth.Codeforces" />
         <activity android:name=".Menu.MenuChoice" />
 

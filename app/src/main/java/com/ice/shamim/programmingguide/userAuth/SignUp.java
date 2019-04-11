@@ -12,7 +12,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -30,8 +29,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ice.shamim.programmingguide.R;
-
-import org.w3c.dom.Text;
+import com.ice.shamim.programmingguide.userAuth.Uva.UVa;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
@@ -99,7 +97,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         }
         else if(view.getId() ==  R.id.nextSignUp){
 
-            startActivity(new Intent(this,UVa.class));
+            startActivity(new Intent(this, UVa.class));
         }
         else if(view.getId() ==  R.id.loginOptionsPage){
 
