@@ -1,17 +1,28 @@
 package com.ice.shamim.programmingguide.userAuth.Uva;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ice.shamim.programmingguide.R;
 import com.ice.shamim.programmingguide.userAuth.Codeforces;
+import com.ice.shamim.programmingguide.userAuth.SignUp;
+
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -30,6 +41,11 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
     AppCompatButton UVaIdSubmit;
     RelativeLayout nextPage;
     String User_ID;
+    Dialog verifiedDialog;
+    ConstraintLayout mConstrainLayout;
+    int check_field = 0;
+    Snackbar snackbar;
+    ProgressDialog progressDialog;
     private List<SubmissionDetailsModelClass> listItems;
 
     @Override
@@ -40,6 +56,9 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
         UVaUserName = findViewById(R.id.UVaUserNameEditText);
         UVaIdSubmit = findViewById(R.id.submitUvaId);
         nextPage = findViewById(R.id.nextUVa);
+        mConstrainLayout = findViewById(R.id.uvaPage);
+
+        verifiedDialog = new Dialog(UVa.this);
 
         nextPage.setOnClickListener(this);
         UVaIdSubmit.setOnClickListener(this);
@@ -64,12 +83,23 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
 
     private void ParsingUserNameToUserID() {
 
+        progressDialog = new ProgressDialog(UVa.this,R.style.MyAlertDialogStyle);
+        progressDialog.setMessage("Connecting ...");
+        progressDialog.setProgressStyle(progressDialog.STYLE_SPINNER);
+        progressDialog.show();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ApiForUserID.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         String uname = UVaUserName.getText().toString().trim();
+
+        if(uname.isEmpty()){
+            check_field = 0;
+            snackbar();
+            return;
+        }
 
         ApiForUserID api;
         api = retrofit.create(ApiForUserID.class);
@@ -82,12 +112,15 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
                 User_ID = response.body().toString();
 
                 if(User_ID.equals("0")){
-                    UVaUserName.setText("Invalid Username !!!");
+                    check_field = 1;
+                    snackbar();
+                    return;
                 }
-                else UVaUserName.setText("User ID : "+response.body().toString());
+                else {
+                    //Successful
+                    ParseingSubmissionDetails();
+                }
 
-
-                ParseingSubmissionDetails();
 
             }
 
@@ -100,7 +133,6 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
 
 
     }
-
 
 
 
@@ -137,7 +169,6 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
                     Log.d("Problem Num : ",data[i][1].toString());
                     Log.d("Verdict : ",data[i][2].toString());
                     Log.d("submission : ", String.valueOf(data.length));
-                    //Toast.makeText(MainActivity.this, "yes", Toast.LENGTH_SHORT).show();
 
                     String verdict = data[i][2].toString();
 
@@ -148,11 +179,18 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
 
                 }
 
-                Toast.makeText(UVa.this, "Accepted :"+Accepted_problems.size(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(UVa.this, "Accepted :"+Accepted_problems.size(), Toast.LENGTH_SHORT).show();
 
+/*
                 UVaUserName.setText( "Total Submission :" + String.valueOf(data.length) +
                         "\n Total Accepted : "+String.valueOf(Accepted_problems.size()));
+*/
 
+
+
+                //Showing Success Dialog
+                progressDialog.dismiss();
+                ShowVerificationDialog();
 
             }
 
@@ -163,6 +201,54 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
         });
 
 
+    }
+
+
+
+
+    public void ShowVerificationDialog() {
+
+        verifiedDialog.setContentView(R.layout.custom_dialog_verification);
+        TextView vfText = verifiedDialog.findViewById(R.id.verifiedText);
+        ImageView vfDone = verifiedDialog.findViewById(R.id.checkmark);
+        Button Donebtn = verifiedDialog.findViewById(R.id.btnDone);
+
+
+        vfText.setText("UVa is Connected.");
+        verifiedDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        verifiedDialog.setCanceledOnTouchOutside(false);
+        verifiedDialog.show();
+
+        Donebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                verifiedDialog.dismiss();
+                startActivity(new Intent(UVa.this,Codeforces.class));
+                finish();
+            }
+        });
+
+
+    }
+
+
+
+
+    private void snackbar() {
+
+        progressDialog.dismiss();
+        if(check_field == 0) {
+            snackbar = Snackbar.make(mConstrainLayout, "All fields are mandatory.", Snackbar.LENGTH_LONG);
+        }
+        else if(check_field == 1) {
+            snackbar = Snackbar.make(mConstrainLayout, "Invalid Username !!!.", Snackbar.LENGTH_LONG);
+        }
+
+
+        View sbView = snackbar.getView();
+        sbView.setBackgroundColor(this.getResources().getColor(R.color.GoogleColor));
+
+        snackbar.show();
     }
 
 }
