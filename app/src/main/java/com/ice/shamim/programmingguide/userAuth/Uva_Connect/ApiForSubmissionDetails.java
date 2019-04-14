@@ -1,4 +1,4 @@
-package com.ice.shamim.programmingguide.userAuth.Uva;
+package com.ice.shamim.programmingguide.userAuth.Uva_Connect;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

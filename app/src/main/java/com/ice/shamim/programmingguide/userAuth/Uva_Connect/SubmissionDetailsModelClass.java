@@ -1,4 +1,4 @@
-package com.ice.shamim.programmingguide.userAuth.Uva;
+package com.ice.shamim.programmingguide.userAuth.Uva_Connect;
 
 public class SubmissionDetailsModelClass {
 

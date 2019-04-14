@@ -1,4 +1,4 @@
-package com.ice.shamim.programmingguide.userAuth.Uva;
+package com.ice.shamim.programmingguide.userAuth.Uva_Connect;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -20,8 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ice.shamim.programmingguide.R;
-import com.ice.shamim.programmingguide.userAuth.Codeforces;
-import com.ice.shamim.programmingguide.userAuth.SignUp;
+import com.ice.shamim.programmingguide.userAuth.Codeforces_Connect.Codeforces_Connect;
 
 
 import java.util.ArrayList;
@@ -35,7 +34,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class UVa extends AppCompatActivity implements View.OnClickListener{
+public class UVa_Connect extends AppCompatActivity implements View.OnClickListener{
 
     EditText UVaUserName;
     AppCompatButton UVaIdSubmit;
@@ -58,7 +57,9 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
         nextPage = findViewById(R.id.nextUVa);
         mConstrainLayout = findViewById(R.id.uvaPage);
 
-        verifiedDialog = new Dialog(UVa.this);
+        verifiedDialog = new Dialog(UVa_Connect.this);
+
+        nextPage.setVisibility(View.INVISIBLE);
 
         nextPage.setOnClickListener(this);
         UVaIdSubmit.setOnClickListener(this);
@@ -69,7 +70,7 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view) {
 
         if(view.getId() == R.id.nextUVa){
-            startActivity(new Intent(this, Codeforces.class));
+            startActivity(new Intent(this, Codeforces_Connect.class));
         }
         if(view.getId() == R.id.submitUvaId){
 
@@ -83,7 +84,7 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
 
     private void ParsingUserNameToUserID() {
 
-        progressDialog = new ProgressDialog(UVa.this,R.style.MyAlertDialogStyle);
+        progressDialog = new ProgressDialog(UVa_Connect.this,R.style.MyAlertDialogStyle);
         progressDialog.setMessage("Connecting ...");
         progressDialog.setProgressStyle(progressDialog.STYLE_SPINNER);
         progressDialog.show();
@@ -127,7 +128,8 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onFailure(Call<Integer> call, Throwable t) {
 
-                Toast.makeText(UVa.this, t.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(UVa_Connect.this, t.toString(), Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -179,7 +181,7 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
 
                 }
 
-               // Toast.makeText(UVa.this, "Accepted :"+Accepted_problems.size(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(UVa_Connect.this, "Accepted :"+Accepted_problems.size(), Toast.LENGTH_SHORT).show();
 
 /*
                 UVaUserName.setText( "Total Submission :" + String.valueOf(data.length) +
@@ -223,7 +225,7 @@ public class UVa extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onClick(View view) {
                 verifiedDialog.dismiss();
-                startActivity(new Intent(UVa.this,Codeforces.class));
+                startActivity(new Intent(UVa_Connect.this, Codeforces_Connect.class));
                 finish();
             }
         });

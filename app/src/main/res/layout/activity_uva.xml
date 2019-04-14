@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/uvaPage"
     android:background="@color/background"
-    tools:context=".userAuth.Uva.UVa">
+    tools:context=".userAuth.Uva_Connect.UVa_Connect">
 
 <!--    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

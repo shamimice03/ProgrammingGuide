@@ -29,7 +29,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ice.shamim.programmingguide.R;
-import com.ice.shamim.programmingguide.userAuth.Uva.UVa;
+import com.ice.shamim.programmingguide.userAuth.Uva_Connect.UVa_Connect;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
@@ -97,7 +97,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         }
         else if(view.getId() ==  R.id.nextSignUp){
 
-            startActivity(new Intent(this, UVa.class));
+            startActivity(new Intent(this, UVa_Connect.class));
         }
         else if(view.getId() ==  R.id.loginOptionsPage){
 
@@ -298,7 +298,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onClick(View view) {
                 verifiedDialog.dismiss();
-                startActivity(new Intent(SignUp.this,UVa.class));
+                startActivity(new Intent(SignUp.this, UVa_Connect.class));
                 finish();
             }
         });

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".userAuth.Codeforces">
+    android:id="@+id/Codeforces_page"
+    tools:context=".userAuth.Codeforces_Connect.Codeforces_Connect">
 
     <!--    <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
