@@ -13,11 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".splashScreen.Show_Splash_Screen">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".userAuth.Login_options" />
@@ -42,7 +38,14 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainMenu.MainMenu"> </activity>
+        <activity android:name=".MainMenu.MainMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".MainMenu.Navigation" />
         <activity android:name=".MainMenu.Fragment.Event.EventMenuItem">
 

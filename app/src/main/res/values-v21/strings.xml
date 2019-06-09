@@ -20,6 +20,7 @@
     <string name="title_4">Random Test</string>
     <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
     <string name="verification_text">A Verification link is sent to your Email.\nPlease Verify your Email.</string>
+    <string name="please_wait_for_next_update">Please wait for next update.</string>
 
 
 </resources>

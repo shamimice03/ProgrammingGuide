@@ -10,6 +10,7 @@
 
 
     <android.support.v7.widget.CardView
+        android:visibility="visible"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/EventcardView"
         android:layout_width="match_parent"
@@ -77,6 +78,86 @@
                 android:text="2days 3hour remains"
                 android:textColor="@android:color/white"
                 android:textSize="14dp" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+<!--Disable part-->
+
+    <android.support.v7.widget.CardView
+
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:visibility="gone"
+        android:id="@+id/EventcardViewDisable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_card_view_disable">
+
+
+
+
+            <TextView
+                android:id="@+id/percentCompletionDisable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/arimo"
+                android:gravity="center_horizontal"
+                android:text="0% Completed"
+                android:textColor="@color/disableColor"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@android:color/white"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:backgroundTint="@color/disableColor"
+                />
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/disableColor"
+                android:background="@mipmap/continue_button" />
+
+
+            <TextView
+                android:id="@+id/timeremainDisable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/arimo"
+                android:gravity="bottom|center"
+                android:text="@string/please_wait_for_next_update"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
 
         </RelativeLayout>
 

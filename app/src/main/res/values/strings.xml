@@ -123,6 +123,7 @@
     <string name="resend_link">Resend Link</string>
     <string name="register_again">I want to register again.</string>
     <string name="register">Register</string>
+    <string name="please_wait_for_next_update">Please wait for next update.</string>
 
 
 </resources>

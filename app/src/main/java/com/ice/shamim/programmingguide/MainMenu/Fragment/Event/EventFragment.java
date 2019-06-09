@@ -27,7 +27,7 @@ public class EventFragment extends Fragment implements View.OnClickListener {
     }
 
     TextView completionRate,timeRemains;
-    CardView eventCard;
+    CardView eventCard,eventCardDisable;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,13 +38,22 @@ public class EventFragment extends Fragment implements View.OnClickListener {
         completionRate = (TextView) view.findViewById(R.id.percentCompletion);
         timeRemains = (TextView) view.findViewById(R.id.timeremain);
         eventCard = (CardView) view.findViewById(R.id.EventcardView);
+        eventCardDisable = (CardView) view.findViewById(R.id.EventcardViewDisable);
 
 
        String LeftTime = TimeLeft();
+       if(LeftTime.equals("Deadline")==false){
+           completionRate.setText("5% Completed");
+           timeRemains.setText(LeftTime);
+           eventCard.setOnClickListener(this);
+       }else{
 
-       completionRate.setText("5% Completed");
-       timeRemains.setText(LeftTime);
-       eventCard.setOnClickListener(this);
+           eventCard.setVisibility(View.GONE);
+           eventCardDisable.setVisibility(View.VISIBLE);
+       }
+
+
+
 
 
         return view;
@@ -56,14 +65,14 @@ public class EventFragment extends Fragment implements View.OnClickListener {
 
     public String TimeLeft() {
 
-        String toyBornTime = "2019-02-15 00:00:00";   //need to sync from server
+        String toyBornTime = "2019-05-26 22:00:00";   //need to sync from server
         SimpleDateFormat dateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd HH:mm:ss");
 
-        Date oldDate = null;
+        Date deadlineTime = null;
 
         try {
-            oldDate = dateFormat.parse(toyBornTime);
+            deadlineTime = dateFormat.parse(toyBornTime);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -71,12 +80,17 @@ public class EventFragment extends Fragment implements View.OnClickListener {
 
         Date currentDate = new Date();
 
-        long diff = oldDate.getTime() -currentDate.getTime();
+        Log.e("date",currentDate.toString());
+
+        long diff = deadlineTime.getTime() - currentDate.getTime();
         long seconds = diff / 1000;
         long minutes = seconds / 60;
         long hours = minutes / 60;
         long days = hours / 24;
-        long hours_left = hours % 24;
+        long hours_left = hours-(days*24);
+        long minutes_left = minutes- (hours_left*60);
+
+
 
 
 
@@ -84,10 +98,21 @@ public class EventFragment extends Fragment implements View.OnClickListener {
         Log.e("Difference: ", " seconds: " + seconds + " minutes: " + minutes
                 + " hours: " + hours + " days: " + days);
 
-        String s1 = String.valueOf(days);
-        String s2 = String.valueOf(hours_left);
+        String s;
 
-        String s = s1 + " days " + s2 +" hrs left";
+        if(minutes_left<=0) {
+            s = "Deadline";
+        }
+        else if(days==0){
+            String s1 = String.valueOf(hours_left);
+            String s2 = String.valueOf(minutes_left);
+            s = s1 + " hrs " + s2 +" min left";
+        }else {
+            String s1 = String.valueOf(days);
+            String s2 = String.valueOf(hours_left);
+            s = s1 + " days " + s2 +" hrs left";
+        }
+
 
         return s;
 
