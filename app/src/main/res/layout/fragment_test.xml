@@ -6,6 +6,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/nav_color"
+    android:id="@+id/testFragment"
     tools:context=".MainMenu.Fragment.Course.LessonAndTest.TestFragment">
 
         <ScrollView
@@ -25,7 +26,7 @@
                             android:textColor="@android:color/black"
                             android:text="What is Loop in C programming?\nHow to Declare it?"
                             android:fontFamily="@font/abel"
-                            android:textSize="25sp"
+                            android:textSize="20sp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             />
@@ -54,6 +55,8 @@
                                             android:layout_height="match_parent">
 
                                                 <LinearLayout
+                                                    android:id="@+id/optionA_Layout"
+                                                    android:clickable="true"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"
                                                     android:orientation="horizontal"
@@ -61,6 +64,7 @@
                                                     android:layout_height="48dp">
 
                                                         <android.support.v7.widget.AppCompatCheckBox
+                                                            android:clickable="false"
                                                             android:layout_gravity="center"
                                                             android:id="@+id/optionA_checkBox"
                                                             android:layout_width="wrap_content"
@@ -88,6 +92,8 @@
 
 
                                                 <LinearLayout
+                                                    android:id="@+id/optionB_Layout"
+                                                    android:clickable="true"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"
                                                     android:orientation="horizontal"
@@ -95,6 +101,7 @@
                                                     android:layout_height="48dp">
 
                                                         <android.support.v7.widget.AppCompatCheckBox
+                                                            android:clickable="false"
                                                             android:id="@+id/optionB_checkBox"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
@@ -121,6 +128,8 @@
                                                     android:background="#c0c0c0"/>
 
                                                 <LinearLayout
+                                                    android:id="@+id/optionC_Layout"
+                                                    android:clickable="true"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"
                                                     android:orientation="horizontal"
@@ -128,6 +137,7 @@
                                                     android:layout_height="48dp">
 
                                                         <android.support.v7.widget.AppCompatCheckBox
+                                                            android:clickable="false"
                                                             android:id="@+id/optionC_checkBox"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
@@ -155,6 +165,8 @@
                                                     android:background="#c0c0c0"/>
 
                                                 <LinearLayout
+                                                    android:id="@+id/optionD_Layout"
+                                                    android:clickable="true"
                                                     android:layout_marginLeft="10dp"
                                                     android:layout_marginRight="10dp"
                                                     android:orientation="horizontal"
@@ -162,6 +174,7 @@
                                                     android:layout_height="48dp">
 
                                                         <android.support.v7.widget.AppCompatCheckBox
+                                                            android:clickable="false"
                                                             android:id="@+id/optionD_checkBox"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"

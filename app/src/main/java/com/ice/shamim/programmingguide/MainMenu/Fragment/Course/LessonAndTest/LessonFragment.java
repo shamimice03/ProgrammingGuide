@@ -44,7 +44,6 @@ public class LessonFragment extends Fragment {
 
         /*Setting Which file will show*/
         setFile(course,title);
-
         mWebView = (WebView) view.findViewById(R.id.simpleWebView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.loadUrl("file:///android_asset/" + fileName);

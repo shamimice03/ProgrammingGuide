@@ -42,7 +42,7 @@ public class OurData extends MainMenu {
                         ));
                 productList.add(
                         new Product(
-                                "Loop",
+                                "TestModel",
                                 "C programming"
                         ));
                 productList.add(
@@ -101,7 +101,7 @@ public class OurData extends MainMenu {
                         ));
                 productList.add(
                         new Product(
-                                "Loop",
+                                "TestModel",
                                 "Java"
                         ));
                 productList.add(
