@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.ice.shamim.programmingguide.Menu.MenuChoice;
 import com.ice.shamim.programmingguide.R;
@@ -23,10 +24,22 @@ public class Navigation extends AppCompatActivity implements View.OnClickListene
     , left_to_right_animation_forum,left_to_right_animation_feedback,left_to_right_animation_credits;
 
 
+    public  static int value;
+    public int number;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
+
+        /**/
+
+        number = getIntent().getExtras().getInt("number");
+        value = number;
+        Toast.makeText(this, Integer.toString(number), Toast.LENGTH_SHORT).show();
+
+        /**/
 
         Nav_Button = findViewById(R.id.backToMainMenu);
         SelectLinearLayout = findViewById(R.id.Select);
@@ -93,12 +106,18 @@ public class Navigation extends AppCompatActivity implements View.OnClickListene
 
         if(view.getId() == R.id.backToMainMenu){
 
-            startActivity(new Intent(this,MainMenu.class));
+            Intent intent = new Intent(this, MainMenu.class);
+            intent.putExtra("number", number);
+            startActivity(intent);
+
+           //startActivity(new Intent(this,MainMenu.class));
+           // finish();
         }
 
         else if(view.getId() == R.id.Select){
 
             startActivity(new Intent(this, MenuChoice.class));
+            finish();
 
         }
         else if(view.getId() == R.id.Library){

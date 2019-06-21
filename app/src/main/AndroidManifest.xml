@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ice.shamim.programmingguide">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,45 +11,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".splashScreen.Show_Splash_Screen">
-
-
-
-        </activity>
-        <activity android:name=".userAuth.Login_options" />
-        <activity
-            android:name=".userAuth.Login"
-            android:windowSoftInputMode="stateVisible|adjustResize" />
-
-        <activity android:name=".userAuth.SignUp">
-
-        </activity>
-
-
-        <activity android:name=".userAuth.Uva_Connect.UVa_Connect" >
-
-        </activity>
-        <activity android:name=".userAuth.Codeforces_Connect.Codeforces_Connect">
-
-        </activity>
-        <activity android:name=".Menu.MenuChoice" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <activity android:name=".MainMenu.MainMenu">
+        <activity android:name=".MainMenu.Fragment.Course.LessonAndTest.LessonAndTestMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-        </activity>
-        <activity android:name=".MainMenu.Navigation" />
-        <activity android:name=".MainMenu.Fragment.Event.EventMenuItem">
 
         </activity>
+        <activity android:name=".splashScreen.Show_Splash_Screen" />
+        <activity android:name=".userAuth.Login_options" />
+        <activity
+            android:name=".userAuth.Login"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".userAuth.SignUp" />
+        <activity android:name=".userAuth.Uva_Connect.UVa_Connect" />
+        <activity android:name=".userAuth.Codeforces_Connect.Codeforces_Connect" />
+        <activity android:name=".Menu.MenuChoice">
+
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".MainMenu.MainMenu" />
+        <activity android:name=".MainMenu.Navigation" />
+        <activity android:name=".MainMenu.Fragment.Event.EventMenuItem" />
+        <activity android:name=".MainMenu.Fragment.Course.ProductAdapter" />
     </application>
 
 </manifest>

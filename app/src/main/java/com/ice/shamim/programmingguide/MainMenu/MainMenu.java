@@ -15,14 +15,19 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 
-import com.ice.shamim.programmingguide.MainMenu.Fragment.CourseFragment;
+import com.ice.shamim.programmingguide.MainMenu.Fragment.Course.CourseFragment;
+import com.ice.shamim.programmingguide.MainMenu.Fragment.Course.Product;
 import com.ice.shamim.programmingguide.MainMenu.Fragment.Event.EventFragment;
 import com.ice.shamim.programmingguide.MainMenu.Fragment.LeaderboardFragment;
 import com.ice.shamim.programmingguide.MainMenu.Fragment.ProfileFragment;
 import com.ice.shamim.programmingguide.MainMenu.Fragment.RecommandedFragment;
 import com.ice.shamim.programmingguide.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainMenu extends AppCompatActivity implements View.OnClickListener {
@@ -50,6 +55,9 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
     ActionBarDrawerToggle actionBarDrawerToggle;
 
     MenuItem prevMenuItem;
+    public  static int value;
+    public int number;
+
 
 
     @Override
@@ -57,12 +65,23 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        /*data from menu choice*/
+
+        number = getIntent().getExtras().getInt("number");
+
+        value = number;
+        Toast.makeText(this, Integer.toString(number), Toast.LENGTH_SHORT).show();
+        /******/
+
+
+
+
+
         //Initializing viewPager
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         //Initializing the bottomNavigationView
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
-
         nav_button = findViewById(R.id.nav_icon);
         linearLayout = findViewById(R.id.layout_touch);
 
@@ -139,6 +158,11 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+    /**/
+    public int getSelectedItem() {
+
+        return value;
+    }
 
 
     public void setupViewPager(ViewPager viewPager) {
@@ -166,7 +190,12 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
 
         if(view.getId() == R.id.nav_icon){
 
-            Intent intent = new Intent(this,Navigation.class);
+
+            //Intent intent = new Intent(this,Navigation.class);
+            Intent intent = new Intent(this, Navigation.class);
+            intent.putExtra("number", number);
+            startActivity(intent);
+
             Bundle bndlAnimation = ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.slide_in_left, R.anim.slide_out_right).toBundle();
 
             startActivity(intent, bndlAnimation);

@@ -17,13 +17,14 @@ import com.ice.shamim.programmingguide.R;
 
 public class MenuChoice extends AppCompatActivity implements View.OnClickListener {
 
+
     CardView C_card,Cpp_card,Java_card,DataStructure_card,Algorithms_card;
     AppCompatCheckBox C_checkboxInit,Cpp_checkboxInit,Java_checkboxInit,DataStructure_checkboxInit,Algorithms_checkboxInit;
     LinearLayout mElementContainer,Buttons;
     AppCompatButton ButtonContinue,ButtonCancel;
     Animation fade;
     ScrollView scrollView;
-
+    public int selected_item=0;
 
 
 
@@ -88,6 +89,7 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
 
         if(view.getId() == R.id.C_element || view.getId() == R.id.C_checkBox){
 
+            selected_item = 1;
 
             C_checkboxInit.setChecked(true);
             Buttons.setAlpha(1);
@@ -110,6 +112,7 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
 
         else if(view.getId() == R.id.Cpp_element || view.getId() == R.id.Cpp_checkBox){
 
+            selected_item = 2;
 
             Cpp_checkboxInit.setChecked(true);
             Buttons.setAlpha(1);
@@ -131,6 +134,7 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
 
         else if(view.getId() == R.id.Java_element  || view.getId() == R.id.Java_checkBox){
 
+            selected_item = 3;
 
             Java_checkboxInit.setChecked(true);
             Buttons.setAlpha(1);
@@ -153,6 +157,7 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
 
         else if(view.getId() == R.id.DataStrcuture_element  || view.getId() == R.id.DataStrcuture_checkBox){
 
+            selected_item = 4;
 
             DataStructure_checkboxInit.setChecked(true);
             Buttons.setAlpha(1);
@@ -175,6 +180,7 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
 
         else if(view.getId() == R.id.Algorithms_element  || view.getId() == R.id.Algorithms_checkBox){
 
+            selected_item = 5;
 
             Algorithms_checkboxInit.setChecked(true);
             Buttons.setAlpha(1);
@@ -201,6 +207,7 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
 
             Buttons.setAlpha(0);
 
+            selected_item = 0;
 
             C_checkboxInit.setChecked(false);
             Cpp_checkboxInit.setChecked(false);
@@ -223,8 +230,9 @@ public class MenuChoice extends AppCompatActivity implements View.OnClickListene
         }
 
         if(view.getId() == R.id.ContinueButton){
-
-           startActivity(new Intent(this, MainMenu.class));
+            Intent i = new Intent(this, MainMenu.class);
+            i.putExtra("number", selected_item);
+            startActivity(i);
 
         }
 

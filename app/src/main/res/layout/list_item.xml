@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+
+        android:visibility="visible"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/EventcardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/gradient_course_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="C programming"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            />
+
+            <TextView
+                android:id="@+id/completion_rate"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="0% Completed"
+                android:fontFamily="@font/abel"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:background="@drawable/gradient_card_view"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/topic_name"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Array"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

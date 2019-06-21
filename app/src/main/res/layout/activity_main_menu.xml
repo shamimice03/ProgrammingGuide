@@ -9,6 +9,7 @@
     tools:context=".MainMenu.MainMenu">
 
     <LinearLayout
+        android:background="@drawable/gradient_top_bar"
         android:id="@+id/layout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -43,8 +44,6 @@
         android:layout_below="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:background="@color/lightGrey"/>
 
 

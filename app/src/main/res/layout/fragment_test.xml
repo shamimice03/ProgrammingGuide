@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/nav_color"
+    tools:context=".MainMenu.Fragment.Course.LessonAndTest.TestFragment">
+
+        <ScrollView
+            android:layout_marginBottom="58dp"
+            android:scrollbars="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/question"
+                            android:layout_margin="20dp"
+                            android:textColor="@android:color/black"
+                            android:text="What is Loop in C programming?\nHow to Declare it?"
+                            android:fontFamily="@font/abel"
+                            android:textSize="25sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            card_view:cardCornerRadius="2dp">
+
+
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <RadioGroup
+                                            android:checkedButton="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="48dp">
+
+                                                        <android.support.v7.widget.AppCompatCheckBox
+                                                            android:layout_gravity="center"
+                                                            android:id="@+id/optionA_checkBox"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:button="@drawable/custom_radio_button"
+                                                            />
+
+                                                        <TextView
+                                                            android:layout_gravity="center"
+                                                            android:id="@+id/optionA_textView"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:fontFamily="@font/actor"
+                                                            android:text="Option A"
+                                                            android:textColor="@android:color/black"
+                                                            android:textSize="20sp" />
+
+                                                </LinearLayout>
+
+                                                <View
+                                                    android:layout_width="fill_parent"
+                                                    android:layout_height="0.5dp"
+                                                    android:background="#c0c0c0"/>
+
+
+                                                <LinearLayout
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="48dp">
+
+                                                        <android.support.v7.widget.AppCompatCheckBox
+                                                            android:id="@+id/optionB_checkBox"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:button="@drawable/custom_radio_button"
+                                                            />
+
+                                                        <TextView
+                                                            android:id="@+id/optionB_textView"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:fontFamily="@font/actor"
+                                                            android:text="Option B"
+                                                            android:textColor="@android:color/black"
+                                                            android:textSize="20sp" />
+
+                                                </LinearLayout>
+
+                                                <View
+                                                    android:layout_width="fill_parent"
+                                                    android:layout_height="0.5dp"
+                                                    android:background="#c0c0c0"/>
+
+                                                <LinearLayout
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="48dp">
+
+                                                        <android.support.v7.widget.AppCompatCheckBox
+                                                            android:id="@+id/optionC_checkBox"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:textColor="@android:color/black"
+                                                            android:button="@drawable/custom_radio_button"
+                                                            />
+
+                                                        <TextView
+                                                            android:id="@+id/optionC_textView"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:fontFamily="@font/actor"
+                                                            android:textColor="@android:color/black"
+                                                            android:text="Option C"
+                                                            android:textSize="20sp" />
+
+                                                </LinearLayout>
+
+                                                <View
+                                                    android:layout_width="fill_parent"
+                                                    android:layout_height="0.5dp"
+                                                    android:background="#c0c0c0"/>
+
+                                                <LinearLayout
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="48dp">
+
+                                                        <android.support.v7.widget.AppCompatCheckBox
+                                                            android:id="@+id/optionD_checkBox"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:button="@drawable/custom_radio_button"
+                                                            />
+
+                                                        <TextView
+                                                            android:id="@+id/optionD_textView"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:fontFamily="@font/actor"
+                                                            android:text="Option D"
+                                                            android:textColor="@android:color/black"
+                                                            android:textSize="20sp" />
+
+                                                </LinearLayout>
+
+                                        </RadioGroup>
+
+
+
+
+                                </LinearLayout>
+
+
+                        </android.support.v7.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+
+        </ScrollView>
+
+        <View
+            android:layout_above="@+id/submitLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
+
+        <LinearLayout
+            android:id="@+id/submitLayout"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submitAnsBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
+                    android:text="Submit Answer"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/holo_green_light"
+                    />
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>

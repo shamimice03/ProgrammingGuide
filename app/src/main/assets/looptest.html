@@ -1,0 +1,32 @@
+<h1><span style="font-family: 'Verdana','sans-serif'; color: grey;">Loop</span></h1>
+<p>A loop is used for executing a block of statements repeatedly until a given condition returns false.</p>
+<h3><span style="font-size: 10.0pt; font-family: 'Verdana','sans-serif'; color: black;">Types of Loop</span></h3>
+<div style="background: #f0f3f3; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><span style="color: #006699; font-weight: bold;">for</span> loop
+<span style="color: #006699; font-weight: bold;">while</span> loop
+<span style="color: #006699; font-weight: bold;">do</span><span style="color: #555555;">-</span><span style="color: #006699; font-weight: bold;">while</span> loop</pre>
+</div>
+<h2>&nbsp;</h2>
+<h2><span style="font-size: 10.0pt; line-height: 115%; font-family: 'Verdana','sans-serif'; color: black;">for Loop</span></h2>
+<p>&nbsp;The syntax of for loop is:</p>
+<div style="background: #f0f3f3; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><span style="color: #006699; font-weight: bold;">for</span> (initial; test; update)
+{
+       <span style="color: #0099ff; font-style: italic;">// codes </span>
+}
+</pre>
+</div>
+<p><code>for</code>&nbsp;loop is used to execute a set of statements repeatedly until a particular condition is satisfied. We can say it is an&nbsp;<strong>open-ended loop.</strong></p>
+<p><strong><span style="font-size: 10.0pt; font-family: 'Verdana','sans-serif'; color: black;">Example:</span></strong></p>
+<pre class="hljs" style="color: #a9b7c6; background: #282b2e; display: block; overflow-x: auto; padding: 0.5em;"><span class="hljs-meta" style="color: #bbb529;">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword" style="color: #cc7832;">int</span> <span class="hljs-title" style="color: #ffc66d;">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword" style="color: #cc7832;">int</span> num, i, sum = <span class="hljs-number" style="color: #6897bb;">0</span>;
+    <span class="hljs-keyword" style="color: #cc7832;">for</span>(i = <span class="hljs-number" style="color: #6897bb;">1</span>; i &lt;= <span class="hljs-number" style="color: #6897bb;">10</span>; ++i)
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string" style="color: #6a8759;">"%d "</span>,i);
+    }
+    <span class="hljs-keyword" style="color: #cc7832;">return</span> <span class="hljs-number" style="color: #6897bb;">0</span>;
+}</pre>
+<pre class="hljs" style="color: #a9b7c6; background: #282b2e; display: block; overflow-x: auto; padding: 0.5em;">Output :
+<span class="hljs-number" style="color: #6897bb;">1</span> <span class="hljs-number" style="color: #6897bb;">2</span> <span class="hljs-number" style="color: #6897bb;">3</span> <span class="hljs-number" style="color: #6897bb;">4</span> <span class="hljs-number" style="color: #6897bb;">5</span> <span class="hljs-number" style="color: #6897bb;">6</span> <span class="hljs-number" style="color: #6897bb;">7</span> <span class="hljs-number" style="color: #6897bb;">8</span> <span class="hljs-number" style="color: #6897bb;">9</span> <span class="hljs-number" style="color: #6897bb;">10</span></pre>
