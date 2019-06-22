@@ -6,7 +6,8 @@ public class Product {
     private String shortdesc;
 
 
-
+    public Product() {
+    }
 
     public Product(String title, String shortdesc) {
         this.title = title;

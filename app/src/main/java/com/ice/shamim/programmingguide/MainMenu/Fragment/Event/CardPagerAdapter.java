@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ice.shamim.programmingguide.MainMenu.Fragment.Event.EventGamePlay.EventGamePlay;
 import com.ice.shamim.programmingguide.MainMenu.MainMenu;
 import com.ice.shamim.programmingguide.MainMenu.Navigation;
 import com.ice.shamim.programmingguide.Menu.MenuChoice;
@@ -82,12 +83,26 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter  {
                 //Toast.makeText(context, position, Toast.LENGTH_SHORT).show();
 
                 if(position == 0) {
-                    Intent i = new Intent(context, MenuChoice.class);
+                    Intent i = new Intent(context, EventGamePlay.class);
+                    i.putExtra("testnumber", 1);
                     context.startActivity(i);
                 }
                 else if(position==1){
 
-                    Intent i = new Intent(context, Navigation.class);
+                    Intent i = new Intent(context, EventGamePlay.class);
+                    i.putExtra("testnumber", 2);
+                    context.startActivity(i);
+                }
+                else if(position==2){
+
+                    Intent i = new Intent(context, EventGamePlay.class);
+                    i.putExtra("testnumber", 3);
+                    context.startActivity(i);
+                }
+                else if(position==3){
+
+                    Intent i = new Intent(context, EventGamePlay.class);
+                    i.putExtra("testnumber", 4);
                     context.startActivity(i);
                 }
             }

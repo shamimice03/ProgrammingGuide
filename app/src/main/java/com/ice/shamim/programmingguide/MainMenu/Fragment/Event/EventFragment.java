@@ -52,10 +52,6 @@ public class EventFragment extends Fragment implements View.OnClickListener {
            eventCardDisable.setVisibility(View.VISIBLE);
        }
 
-
-
-
-
         return view;
     }
 
@@ -65,7 +61,7 @@ public class EventFragment extends Fragment implements View.OnClickListener {
 
     public String TimeLeft() {
 
-        String toyBornTime = "2019-06-16 00:00:00";   //need to sync from server
+        String toyBornTime = "2019-07-16 00:00:00";   //need to sync from server
         SimpleDateFormat dateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd HH:mm:ss");
 

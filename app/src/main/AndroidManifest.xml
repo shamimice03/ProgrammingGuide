@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainMenu.Fragment.Course.LessonAndTest.LessonAndTestMain">
+        <activity android:name=".MainMenu.Fragment.Event.EventGamePlay.EventGamePlay">
 
         </activity>
+        <activity android:name=".MainMenu.Fragment.Course.LessonAndTest.LessonAndTestMain"></activity>
         <activity android:name=".splashScreen.Show_Splash_Screen">
-
 
         </activity>
         <activity android:name=".userAuth.Login_options" />
@@ -26,11 +26,8 @@
         <activity android:name=".userAuth.Uva_Connect.UVa_Connect" />
         <activity android:name=".userAuth.Codeforces_Connect.Codeforces_Connect" />
         <activity android:name=".Menu.MenuChoice">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
 
         </activity>
 
@@ -40,11 +37,18 @@
 
         <activity android:name=".MainMenu.MainMenu">
 
-
         </activity>
         <activity android:name=".MainMenu.Navigation" />
-        <activity android:name=".MainMenu.Fragment.Event.EventMenuItem" />
-        <activity android:name=".MainMenu.Fragment.Course.ProductAdapter"/>
+        <activity android:name=".MainMenu.Fragment.Event.EventMenuItem">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".MainMenu.Fragment.Course.ProductAdapter" />
     </application>
 
 </manifest>
