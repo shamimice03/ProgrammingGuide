@@ -105,7 +105,7 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
         submitAnsBtn.setOnClickListener(this);
 
         numtest = getIntent().getExtras().getInt("testnumber");
-        Toast.makeText(activity, String.valueOf(numtest), Toast.LENGTH_SHORT).show();
+       // Toast.makeText(activity, String.valueOf(numtest), Toast.LENGTH_SHORT).show();
 
 
 
@@ -247,7 +247,7 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
 
             public void onFinish() {
                 CountDownText.setText("Time up.");
-                ShowCorrectDialog(2);
+                //ShowCorrectDialog(2);
 
 
             }
@@ -298,8 +298,6 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
                    // Toast.makeText(EventGamePlay.this,"Score :" +TotalScore, Toast.LENGTH_SHORT).show();
                     ShowCorrectDialog(0);
                     OptionA_CheckBox.setChecked(false);
-                    CurrentTestNumber++;
-                    TestImplementation(CurrentTestNumber);
                 }
                 else{
                     CurrentScore = 0;
@@ -316,8 +314,8 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
 
                     ShowCorrectDialog(0);
                     OptionB_CheckBox.setChecked(false);
-                    CurrentTestNumber++;
-                    TestImplementation(CurrentTestNumber);
+                    //CurrentTestNumber++;
+                    //TestImplementation(CurrentTestNumber);
                 }
                 else{
                     CurrentScore = 0;
@@ -332,8 +330,8 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
                     //Toast.makeText(EventGamePlay.this,"Score :" +TotalScore, Toast.LENGTH_SHORT).show();
                     ShowCorrectDialog(0);
                     OptionC_CheckBox.setChecked(false);
-                    CurrentTestNumber++;
-                    TestImplementation(CurrentTestNumber);
+                    //CurrentTestNumber++;
+                    //TestImplementation(CurrentTestNumber);
                 }
                 else{
                    CurrentScore = 0;
@@ -348,8 +346,8 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
                    // Toast.makeText(EventGamePlay.this,"Score :" +TotalScore, Toast.LENGTH_SHORT).show();
                     ShowCorrectDialog(0);
                     OptionD_CheckBox.setChecked(false);
-                    CurrentTestNumber++;
-                    TestImplementation(CurrentTestNumber);
+                   // CurrentTestNumber++;
+                    //TestImplementation(CurrentTestNumber);
                 }
                 else{
                     CurrentScore = 0;
@@ -386,9 +384,11 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
             Donebtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    CorrectDialog.dismiss();
                     Intent intent = new Intent(EventGamePlay.this, EventMenuItem.class);
                     intent.putExtra("number", MainMenu.value);
                     startActivity(intent);
+                    finish();
                 }
             });
 
@@ -403,8 +403,11 @@ public class EventGamePlay extends AppCompatActivity implements View.OnClickList
             handler.postDelayed(new Runnable() {
                 public void run() {
                     CorrectDialog.dismiss();
+
                 }
             }, 2000);
+            CurrentTestNumber++;
+            TestImplementation(CurrentTestNumber);
 
         }
         else if(i==2){

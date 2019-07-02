@@ -36,11 +36,10 @@ public class LessonFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_lesson, container, false);
 
 
-
         /**/
         int course = MainMenu.value;
         String title = ProductAdapter.title;
-        Toast.makeText(getActivity(), course + title, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), course + title, Toast.LENGTH_SHORT).show();
 
         /*Setting Which file will show*/
         setFile(course,title);

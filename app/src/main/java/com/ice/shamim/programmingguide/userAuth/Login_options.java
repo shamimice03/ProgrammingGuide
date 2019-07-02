@@ -8,13 +8,16 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.ice.shamim.programmingguide.Menu.MenuChoice;
 import com.ice.shamim.programmingguide.R;
 
 public class Login_options extends AppCompatActivity implements View.OnClickListener{
 
     AppCompatButton buttonGoogle,buttonFacebook,buttonEmail;
     TextView LoginPage;
-
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +31,24 @@ public class Login_options extends AppCompatActivity implements View.OnClickList
 
         buttonGoogle.setOnClickListener(this);
         buttonFacebook.setOnClickListener(this);
+        buttonGoogle.setVisibility(View.VISIBLE);
+        buttonFacebook.setVisibility(View.VISIBLE);
         buttonEmail.setOnClickListener(this);
         LoginPage.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(mAuth.getCurrentUser() != null){
+                finish();
+                startActivity(new Intent(this, MenuChoice.class));
+        }
 
 
     }

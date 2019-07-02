@@ -3,6 +3,7 @@
     package="com.ice.shamim.programmingguide">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,16 +18,24 @@
         <activity android:name=".MainMenu.Fragment.Course.LessonAndTest.LessonAndTestMain"></activity>
         <activity android:name=".splashScreen.Show_Splash_Screen">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
         </activity>
         <activity android:name=".userAuth.Login_options" />
         <activity
             android:name=".userAuth.Login"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".userAuth.SignUp" />
-        <activity android:name=".userAuth.Uva_Connect.UVa_Connect" />
+        <activity android:name=".userAuth.Uva_Connect.UVa_Connect">
+
+        </activity>
         <activity android:name=".userAuth.Codeforces_Connect.Codeforces_Connect" />
         <activity android:name=".Menu.MenuChoice">
-
 
 
         </activity>
@@ -40,12 +49,6 @@
         </activity>
         <activity android:name=".MainMenu.Navigation" />
         <activity android:name=".MainMenu.Fragment.Event.EventMenuItem">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".MainMenu.Fragment.Course.ProductAdapter" />

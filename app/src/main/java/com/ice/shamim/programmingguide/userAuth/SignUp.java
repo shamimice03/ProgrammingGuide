@@ -12,6 +12,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
@@ -195,6 +197,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                                 content(email,password);
                             }
                         }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+
+                            Toast.makeText(SignUp.this, "Error message", Toast.LENGTH_SHORT).show();
+                            Log.i("error",e.getMessage());
+                        }
                     });
 
 
@@ -207,6 +216,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             }
 
 
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(SignUp.this, "Error message", Toast.LENGTH_SHORT).show();
+                Log.i("error",e.getMessage());
+            }
         });
 
 
